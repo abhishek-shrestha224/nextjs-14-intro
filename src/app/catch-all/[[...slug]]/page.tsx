@@ -5,13 +5,21 @@ export default function Page({ params }: { params: { slug: string[] } }) {
   if (params.slug?.length > 2) notFound();
   if (params.slug?.length === 2)
     return (
-      <div>
-        Route - {params.slug[0]} - Sub Route - {params.slug[1]}
+      <div className="h-screen w-screen font-primary font-black bg-slate-200 text-slate-800 text-7xl flex justify-center items-center">
+        Route - {params.slug[0]}-Sub Route-{params.slug[1]}
       </div>
     );
 
   if (params.slug?.length === 1)
-    return <div>Content for Route - {params.slug[0]}</div>;
+    return (
+      <div className="h-screen w-screen font-primary font-black bg-slate-200 text-slate-800 text-7xl flex justify-center items-center">
+        Content for Route-{params.slug[0]}
+      </div>
+    );
 
-  return <div>Default page for all other routes</div>;
+  return (
+    <div className="h-screen w-screen font-primary font-black bg-slate-200 text-slate-800 text-7xl flex justify-center items-center">
+      Default page for all other routes
+    </div>
+  );
 }
