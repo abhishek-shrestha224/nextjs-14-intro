@@ -1,5 +1,10 @@
 import { notFound } from "next/navigation";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Catch All",
+};
 
 export default function Page({ params }: { params: { slug: string[] } }) {
   if (params.slug?.length > 2) notFound();
