@@ -1,6 +1,8 @@
+import { notFound } from "next/navigation";
 import React from "react";
 
 export default function Page({ params }: { params: { slug: string[] } }) {
+  if (params.slug?.length > 2) notFound();
   if (params.slug?.length === 2)
     return (
       <div>
