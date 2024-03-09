@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   title: "Catch All",
 };
 
-export default function Page({ params }: { params: { slug: string[] } }) {
+type Props = {
+  params: {
+    slug: string[];
+  };
+};
+
+export default function Page({ params }: Props) {
   if (params.slug?.length > 2) notFound();
   if (params.slug?.length === 2)
     return (
