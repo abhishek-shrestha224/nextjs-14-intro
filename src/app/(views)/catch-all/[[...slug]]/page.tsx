@@ -17,7 +17,7 @@ export default function Page({ params }: Props) {
   if (params.slug?.length === 2)
     return (
       <div className="h-screen w-screen font-primary font-black bg-slate-200 text-slate-800 text-7xl flex justify-center items-center">
-        Route - {params.slug[0]}-Sub Route-{params.slug[1]}
+        Route - {params.slug.at(0)}-Sub Route-{params.slug.at(1)}
       </div>
     );
 
